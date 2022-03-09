@@ -41,6 +41,7 @@ nmap <Tab> :tabnext<Return>
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
+
 " Move window
 nmap <Space> <C-w>w
 map s<left> <C-w>h
@@ -51,6 +52,7 @@ map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
+
 " Resize window
 nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
@@ -76,12 +78,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 "turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
-" scroll around in floating window
-" nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-" nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-" inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-" inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-
 " keep things center when jump
 nnoremap n nzzzv
 nnoremap n Nzzzv
@@ -95,7 +91,6 @@ inoremap , ,<C-g>u
 inoremap . .<C-g>u
 inoremap [ [<C-g>u
 inoremap ! !<C-g>u
-inoremap ! !<C-g>u
 
 " LSP config (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
@@ -103,6 +98,3 @@ nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-" nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-" nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-" nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>

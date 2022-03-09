@@ -38,7 +38,6 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-	-- My plugins here
 	use("wbthomason/packer.nvim") -- let packer manage itself
 	use("tpope/vim-fugitive") -- Git tool box
 	use("tpope/vim-surround") -- add quote, brackets around words
@@ -49,19 +48,20 @@ return packer.startup(function(use)
 	use("mhinz/vim-startify") -- homepage for vim
 	use("lukas-reineke/indent-blankline.nvim") -- blankline that integrate with tree sitter
 	use("kyazdani42/nvim-web-devicons")
-	use("lewis6991/impatient.nvim")
+	-- use("lewis6991/impatient.nvim")
 	use("folke/which-key.nvim")
 	use("hoob3rt/lualine.nvim")
 	use("Shatur/neovim-session-manager")
 
 	-- Cmp Plugins
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
+
+	-- cmp plugins
+	use("hrsh7th/nvim-cmp") -- The completion plugin
+	use("hrsh7th/cmp-buffer") -- buffer completions
+	use("hrsh7th/cmp-path") -- path completions
+	use("hrsh7th/cmp-cmdline") -- cmdline completions
+	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-nvim-lua")
-	use("saadparwaiz1/cmp_luasnip")
-	use("hrsh7th/cmp-vsnip")
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
@@ -95,6 +95,7 @@ return packer.startup(function(use)
 		"sonph/onehalf",
 		rtp = "vim",
 	})
+	use("lunarvim/darkplus.nvim")
 
 	-- postman alternative
 	use("diepm/vim-rest-console")

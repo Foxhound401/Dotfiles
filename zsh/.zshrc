@@ -197,6 +197,7 @@ alias doc='docker'
 alias sheet='sc-im '
 alias artisan='php artisan '
 alias tshark='tshark --color'
+alias feh='feh --draw-filename'
 
 # Folder fast travel
 alias tt="ttyper"

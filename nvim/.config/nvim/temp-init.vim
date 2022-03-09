@@ -158,32 +158,14 @@ if exists("&termguicolors") && exists("&winblend")
   " Use NeoSolarized
   let g:neosolarized_termtrans=1
   runtime ./colors/NeoSolarized.vim
-  "colorscheme NeoSolarized
-  " colorscheme nord
-  " colorscheme palenight
   colorscheme onehalfdark
-  " let g:lightline = { 'colorscheme': 'onehalfdark' }
-  " let g:lightline = {
-  "       \ 'colorscheme': 'onehalfdark',
-  "       \ 'component_function': {
-  "         \   'filename': 'LightlineFilename',
-  "       \ }
-  "     \ }
-
-  function! LightlineFilename()
-    let root = fnamemodify(get(b:, 'git_dir'), ':h')
-    let path = expand('%:p')
-    if path[:len(root)-1] ==# root
-      return path[len(root)+1:]
-    endif
-    return expand('%')
-  endfunction
 
 endif
 
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
 let g:gruvbox_transparent_bg=1
+
 let g:smoothie_enabled=1
 
 

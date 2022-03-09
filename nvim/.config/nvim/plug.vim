@@ -4,7 +4,7 @@ endif
 
 call plug#begin()
 
-Plug 'tpope/vim-rhubarb'
+" Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -51,6 +51,7 @@ if has("nvim")
 
   " autocomplete
   Plug 'hrsh7th/nvim-cmp'
+
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-nvim-lsp'
@@ -69,6 +70,7 @@ if has("nvim")
 
   " Theme and utilities
   Plug 'ap/vim-css-color'
+
   Plug 'arcticicestudio/nord-vim'
   Plug 'drewtempelmeyer/palenight.vim'
 
@@ -114,9 +116,9 @@ Plug 'groenewege/vim-less', { 'for': 'less' }
 call plug#end()
 
 
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.git\|vendor'
-let g:ctrlp_show_hidden = 1
+" let g:ctrlp_max_height = 20
+" let g:ctrlp_custom_ignore = 'node_modules\|^\.git\|vendor'
+" let g:ctrlp_show_hidden = 1
 
 let g:rustfmt_autosave = 1
 

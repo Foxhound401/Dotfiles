@@ -1,7 +1,7 @@
 set completeopt=menu,menuone,noselect
 
 lua <<EOF
-local cmp = require'cmp'
+local cmp = require('cmp')
 
 cmp.setup({
   snippet = {
@@ -24,8 +24,8 @@ cmp.setup({
   },
   experimental = {
     native_menu = false,
-
     ghost_text = true,
   }
 })
+
 EOF

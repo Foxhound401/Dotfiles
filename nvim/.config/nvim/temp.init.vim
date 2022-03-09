@@ -184,10 +184,10 @@ endif
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
 let g:gruvbox_transparent_bg=1
+let g:smoothie_enabled=1
 
 
 """"""""""" Smootth scroll
-let g:smoothie_enabled=1
 
 "}}}
 

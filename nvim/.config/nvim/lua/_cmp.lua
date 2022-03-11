@@ -1,10 +1,13 @@
+---@diagnostic disable: undefined-global
 -- this is a straight up copy from
 -- https://github.com/LunarVim/Neovim-from-scratch/blob/master/lua/user/cmp.lua
 -- with slightly modified key mappings
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-	return
-end
+--local cmp_status_ok, cmp = pcall(require, "cmp")
+--if not cmp_status_ok then
+--	return
+--end
+
+local cmp = require("cmp")
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then

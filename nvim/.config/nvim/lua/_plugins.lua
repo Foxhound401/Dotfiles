@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -18,7 +19,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost _plugins.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -41,31 +42,40 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- let packer manage itself
 	use("tpope/vim-fugitive") -- Git tool box
 	use("tpope/vim-surround") -- add quote, brackets around words
-	use("tpope/vim-commentary") -- Comment stuff
+	-- use("tpope/vim-commentary") -- Comment stuff
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
+	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
+	-- use("lewis6991/impatient.nvim")
 	use("numToStr/Comment.nvim") -- comment also integrate with treesitter
+
 	use("psliwka/vim-smoothie")
+
 	use("mhinz/vim-startify") -- homepage for vim
 	use("lukas-reineke/indent-blankline.nvim") -- blankline that integrate with tree sitter
 	use("kyazdani42/nvim-web-devicons")
-	-- use("lewis6991/impatient.nvim")
 	use("folke/which-key.nvim")
-	use("hoob3rt/lualine.nvim")
 	use("Shatur/neovim-session-manager")
 
-	-- Cmp Plugins
+	use("kyazdani42/nvim-tree.lua")
 
-	-- cmp plugins
-	use("hrsh7th/nvim-cmp") -- The completion plugin
+	-- Lines
+	use("hoob3rt/lualine.nvim")
+	use("akinsho/bufferline.nvim")
+
+	-- Cmp Plugins
+	use("hrsh7th/nvim-cmp") -- buffer completions
 	use("hrsh7th/cmp-buffer") -- buffer completions
 	use("hrsh7th/cmp-path") -- path completions
+	use("hrsh7th/cmp-calc")
+	use("f3fora/cmp-spell")
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
-	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp")
+	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
-	use("tami5/lspsaga.nvim")
+	use("williamboman/nvim-lsp-installer")
+	use("jose-elias-alvarez/null-ls.nvim")
 	use("folke/lsp-colors.nvim")
 	use("stevearc/dressing.nvim")
 
@@ -81,11 +91,11 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-fzy-native.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
 
 	-- Snippets
 	use("hrsh7th/vim-vsnip")
 	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 	-- Colorscheme
 	use("arcticicestudio/nord-vim")
@@ -99,6 +109,19 @@ return packer.startup(function(use)
 
 	-- postman alternative
 	use("diepm/vim-rest-console")
+
+	-- Git
+	use("lewis6991/gitsigns.nvim")
+
+	-- Comment
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+
+	-- Markdown Preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		ft = "markdown",
+		run = "cd app && yarn install",
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()

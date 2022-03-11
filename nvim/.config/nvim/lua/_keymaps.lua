@@ -85,6 +85,9 @@ keymap("n", "<C-s>", ":Startify<CR>", opts)
 
 -- Telescope remap
 -- check again if this is needed when settup telescope at its own file
+keymap("n", "<C-p>", "<cmd>Telescope find_files<CR>", opts)
+
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 
 -- Visual mode
 keymap("v", "<C-c>", '"+y<CR>', opts)

@@ -108,6 +108,7 @@ return packer.startup(function(use)
 		rtp = "vim",
 	})
 	use("lunarvim/darkplus.nvim")
+	use("folke/tokyonight.nvim")
 
 	-- postman alternative
 	use("diepm/vim-rest-console")

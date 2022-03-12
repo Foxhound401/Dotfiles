@@ -45,17 +45,16 @@ return packer.startup(function(use)
 	-- use("tpope/vim-commentary") -- Comment stuff
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
-	-- use("lewis6991/impatient.nvim")
+	use("lewis6991/impatient.nvim")
 	use("numToStr/Comment.nvim") -- comment also integrate with treesitter
-
+	use("norcalli/nvim-colorizer.lua")
 	use("psliwka/vim-smoothie")
-
 	use("mhinz/vim-startify") -- homepage for vim
 	use("lukas-reineke/indent-blankline.nvim") -- blankline that integrate with tree sitter
 	use("kyazdani42/nvim-web-devicons")
 	use("folke/which-key.nvim")
 	use("Shatur/neovim-session-manager")
-
+	use("godlygeek/tabular")
 	use("kyazdani42/nvim-tree.lua")
 
 	-- Lines
@@ -70,11 +69,14 @@ return packer.startup(function(use)
 	use("f3fora/cmp-spell")
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-nvim-lua")
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
+	use("hrsh7th/cmp-vsnip")
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
+
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("folke/lsp-colors.nvim")
 	use("stevearc/dressing.nvim")

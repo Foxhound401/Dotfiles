@@ -33,9 +33,8 @@ export PATH="$PATH:$HOME/.emacs.d/bin"
 
 
 
-# export CF_API_KEY=uIybnqeKa8aCOoAc-aNzauYEGSVIDdt_61ZG7g1R
-export CF_API_TOKEN=uIybnqeKa8aCOoAc-aNzauYEGSVIDdt_61ZG7g1R
-export CF_API_EMAIL="sonnt.dev@gmail.com"
+export CF_API_TOKEN=api-token
+export CF_API_EMAIL="email"
 set DEFAULT_USER="brody"
 
 export LC_CTYPE=en_US.UTF-8

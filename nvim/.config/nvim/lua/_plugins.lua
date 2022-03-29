@@ -56,6 +56,7 @@ return packer.startup(function(use)
 	use("Shatur/neovim-session-manager")
 	use("godlygeek/tabular")
 	use("kyazdani42/nvim-tree.lua")
+	use("p00f/nvim-ts-rainbow")
 
 	-- Lines
 	use("hoob3rt/lualine.nvim")

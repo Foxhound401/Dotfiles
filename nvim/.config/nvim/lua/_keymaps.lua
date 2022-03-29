@@ -89,6 +89,9 @@ keymap("n", "<C-p>", "<cmd>Telescope find_files<CR>", opts)
 
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 
+-- move between buffers
+keymap("n", "<leader>gb", "<cmd>BufferLinePick<CR>", opts)
+
 -- Visual mode
 keymap("v", "<C-c>", '"+y<CR>', opts)
 

@@ -11,6 +11,10 @@ export READER="zathura"
 
 export GITHUB_USER="Foxhound401"
 export GITHUB_PASSWORD="qdpXsc1967"
+
+export GRAFANA_ADDR="https://anorok-gatewayloki.parcelperform.com"
+export GRAFANA_USERNAME=admin
+export GRAFANA_PASSWORD=uqOqm4sterP4ssw0rdQne0vF5
 # export PAGER="vimpager"
 # export BROWSER="chromium"
 export BROWSER="firefox"
@@ -23,7 +27,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+
 export PATH="$PATH:$HOME/.scripts/"
+export PATH="$PATH:$HOME/.tools/"
+
 export PATH="$PATH:$HOME/.dmenu/"
 export PATH="$PATH:$HOME/.screenlayout/"
 export PATH="$PATH:$HOME/.cargo/bin:$PATH"
@@ -107,11 +115,11 @@ mp3p () {
 	youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/Music/youtube/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "$1"
 }
 
-ytv () {
+yv () {
 	youtube-dl --ignore-errors -o '~/Videos/youtube/%(title)s.%(ext)s' "$1"
 }
 
-ytp () {
+yp () {
 	youtube-dl --ignore-errors -o '~/Videos/youtube/%(playlist)s/%(title)s.%(ext)s' "$1"
 }
 
@@ -119,8 +127,9 @@ ipp () {
   ip -4 addr show wlp3s0 | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | awk 'NR==1{ print $1 }'
 }
 
-# utilities
+# tools
 alias soff='xset dpms force off'
+alias v='vim'
 alias vim='nvim'
 alias nnv='vim -u NONE'
 alias sv='sudo nvim'
@@ -141,6 +150,7 @@ alias bctl='bluetoothctl'
 alias lp='lpass show --password -c'
 alias flarecreate='flarectl dns create --type CNAME --content @ --zone eastplayers.io --proxy true --name '
 alias guu='git push |& grep "\-\-set\-upstream" | sh'
+alias stq='steampipe query'
 # alias rc="rustc"
 
 # remapping
@@ -183,6 +193,9 @@ alias cr='cargo run'
 alias lk='cd ~/Work/lukas/'
 alias kf='kubectl --kubeconfig=$HOME/.kube/forthscale '
 
+# I know this is unnecessary but I just dont' want to config thif in git
+alias gpr='git pull --rebase'
+
 alias xampp='sudo /opt/lampp/lampp'
 alias show-key="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%-3s %s\n\", $5, $8 }'"
 
@@ -213,8 +226,21 @@ alias lgo='cd /home/brody/Labs/lab-go'
 alias pg='cd ~/Work/poppy-faire-game'
 alias pb='cd ~/Work/poppy-faire-lib'
 alias dn='cd /home/brody/Work/eastplayers/danang-cns-mobile'
-alias ep='cd /home/brody/Work/eastplayers'
 alias ph='cd /home/brody/Work/learning'
+alias fo='cd /home/brody/Work/forthscale'
+alias pp='cd /home/brody/Work/pp'
+alias tc-up="sudo tailscale up --accept-routes=true --accept-dns=true"
+alias tc-down="sudo tailscale down"
+
+# parcel-perform
+alias aws-prod="export AWS_PROFILE=AdministratorAccess-819159351269"
+alias aws-artemis="export AWS_PROFILE=AdministratorAccess-009115022090"
+alias aws-anorok="export AWS_PROFILE=AdministratorAccess-751440698033"
+alias aws-orion="export AWS_PROFILE=AdministratorAccess-145228830231"
+alias aws-cod="export AWS_PROFILE=AdministratorAccess-589431930217"
+alias aws-iris="export AWS_PROFILE=AdministratorAccess-723734408185"
+alias aws-hydra="export AWS_PROFILE=AdministratorAccess-319811653217"
+alias tf5='terraform-binary'
 
 # config files
 alias zshrc='vim ~/.zshrc'
@@ -234,7 +260,30 @@ alias sshrc='kitty +kitten ssh'
 alias gdf='gitdf.sh '
 alias ter='terraform'
 alias dm='docker-machine'
+
+
+# kubectl alias
 alias k='kubectl'
+alias kgp='k get pod'
+alias kgd='k get deploy'
+alias kgs='k get svc'
+alias kgn='k get nodes'
+alias kgi='k get ingress'
+alias kgcm='k get cm'
+alias kd='k describe'
+alias kg='k get'
+alias kge="k get events --sort-by='.metadata.creationTimestamp' | tail -8"
+
+alias kc-anorok="k config use-context arn:aws:eks:ap-southeast-1:751440698033:cluster/anorok-bBZTfjjv"
+alias kc-cod="k config use-context arn:aws:eks:ap-southeast-1:589431930217:cluster/cod-3XjQecxM"
+# alias kc-hydra="k config use-context "
+alias kc-prod="k config use-context arn:aws:eks:eu-west-1:819159351269:cluster/production-PhKBWYLW"
+alias kc-artemis="k config use-context arn:aws:eks:ap-southeast-1:009115022090:cluster/artemis-Rb31070c"
+alias kc-orion="k config use-context arn:aws:eks:ap-southeast-1:145228830231:cluster/orion-RiatABoo"
+alias kc-iris="k config use-context arn:aws:eks:ap-southeast-1:723734408185:cluster/iris-EFeXb6hJ"
+alias kc-internal="k config use-context arn:aws:eks:ap-southeast-1:819159351269:cluster/internal-tools-UmO5ZSAO"
+
+alias tf='terraform'
 
 alias labk8s='cd ~/Labs/lab-k8s/'
 
@@ -262,3 +311,6 @@ fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform

@@ -42,13 +42,16 @@ local options = {
 	pumblend = 5,
 }
 
+-- highlight limit line column, 
+-- vim.highlight.create('ColorColumn', {ctermbg=0, guibg=lightgrey}, false)
+
 vim.opt.shortmess:append("c")
 -- vim.g.smoothie_enabled = 1
-
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
+vim.cmd("set colorcolumn=80")
 -- vim.o.t_Co="256"
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])

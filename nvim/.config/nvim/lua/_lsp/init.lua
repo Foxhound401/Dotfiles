@@ -5,6 +5,4 @@ end
 
 require("_lsp.lsp-installer")
 require("_lsp.handlers").setup()
-require("_lsp.null-ls")
--- require("lsp.lspsaga")
--- javascript bash go html comment haskell
+--[[ require("_lsp.null-ls") ]]

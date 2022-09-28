@@ -15,14 +15,15 @@ local custom_on_attach = function(client, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
+
 	local function buf_set_option(...)
 		vim.api.nvim_buf_set_option(bufnr, ...)
 	end
 
-	if client.resolved_capabilities.document_formatting then
+	if client.server_capabilities.document_formatting then
 		vim.api.nvim_command([[augroup Format]])
 		vim.api.nvim_command([[autocmd! * <buffer>]])
-		vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()]])
+		vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 		vim.api.nvim_command([[augroup END]])
 	end
 end
@@ -31,8 +32,8 @@ null_ls.setup({
 	sources = {
 		diagnostics.eslint,
 		code_actions.eslint,
-		formatting.prettier.with({ extra_args = { "--single-quote" } }),
-		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.prettier.with({ extra_args = {} }),
+		formatting.black.with({ extra_args = {} }),
 		formatting.stylua,
 	},
 	on_attach = custom_on_attach,

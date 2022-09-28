@@ -6,8 +6,8 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- markdown
 vim.g.vim_markdown_conceal = 0
@@ -78,7 +78,7 @@ keymap("n", "<leader><space>", ":nohlsearch<CR>", opts)
 
 -- Keep things center when jump
 keymap("n", "n", "nzzzv", opts)
-keymap("n", "n", "Nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
 
 -- Access startify
 keymap("n", "<C-s>", ":Startify<CR>", opts)

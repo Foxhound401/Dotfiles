@@ -57,6 +57,9 @@ cmp.setup({
 			luasnip.lsp_expand(args.body) -- For `luasnip` users.
 		end,
 	},
+	window = {
+		documentation = cmp.config.window.bordered(),
+	},
 	mapping = {
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
@@ -120,11 +123,11 @@ cmp.setup({
 		end,
 	},
 	sources = {
-		{ name = "luasnip" },
-		{ name = "nvim_lua" },
 		{ name = "nvim_lsp" },
+		{ name = "nvim_lua" },
+		{ name = "luasnip" },
 		-- { name = "vsnip" },
-		{ name = "buffer", Keyword_length = 3 },
+		{ name = "buffer", Keyword_length = 5 },
 		{ name = "path" },
 		{ name = "cmdline" },
 		{ name = "spell" },
@@ -132,9 +135,6 @@ cmp.setup({
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
-	},
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 	},
 	experimental = {
 		ghost_text = true,

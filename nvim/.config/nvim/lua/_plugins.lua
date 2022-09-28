@@ -40,6 +40,7 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- let packer manage itself
+	use("neovim/nvim-lspconfig")
 	use("tpope/vim-fugitive") -- Git tool box
 	use("tpope/vim-surround") -- add quote, brackets around words
 	-- use("tpope/vim-commentary") -- Comment stuff
@@ -57,31 +58,35 @@ return packer.startup(function(use)
 	use("godlygeek/tabular")
 	use("kyazdani42/nvim-tree.lua")
 	use("p00f/nvim-ts-rainbow")
+  use("nathom/filetype.nvim")
 
 	-- Lines
 	use("hoob3rt/lualine.nvim")
-	use("akinsho/bufferline.nvim")
+	-- use("akinsho/bufferline.nvim")
 
 	-- Cmp Plugins
 	use("hrsh7th/nvim-cmp") -- buffer completions
 	use("hrsh7th/cmp-buffer") -- buffer completions
 	use("hrsh7th/cmp-path") -- path completions
-	use("hrsh7th/cmp-calc")
-	use("f3fora/cmp-spell")
-	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-vsnip")
 
 	-- LSP
-	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
 
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("folke/lsp-colors.nvim")
 	use("stevearc/dressing.nvim")
 
+	use("fatih/vim-go")
+  use({'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" }})
+	use("mfussenegger/nvim-jdtls")
+  use "lukas-reineke/cmp-rg"
+  use("habamax/vim-godot")
+  use("towolf/vim-helm")
+  
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -101,7 +106,7 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 	-- Colorscheme
-	use("arcticicestudio/nord-vim")
+	-- use("arcticicestudio/nord-vim")
 	use("morhetz/gruvbox")
 	use("drewtempelmeyer/palenight.vim")
 	use({

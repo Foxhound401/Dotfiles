@@ -1,25 +1,25 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
-	git = {
-		unstaged = "",
-		staged = "S",
-		unmerged = "",
-		renamed = "➜",
-		deleted = "",
-		untracked = "U",
-		ignored = "◌",
-	},
-	folder = {
-		default = "",
-		open = "",
-		empty = "",
-		empty_open = "",
-		symlink = "",
-	},
-}
+--[[ vim.g.nvim_tree_icons = { ]]
+--[[ 	default = "", ]]
+--[[ 	symlink = "", ]]
+--[[ 	git = { ]]
+--[[ 		unstaged = "", ]]
+--[[ 		staged = "S", ]]
+--[[ 		unmerged = "", ]]
+--[[ 		renamed = "➜", ]]
+--[[ 		deleted = "", ]]
+--[[ 		untracked = "U", ]]
+--[[ 		ignored = "◌", ]]
+--[[ 	}, ]]
+--[[ 	folder = { ]]
+--[[ 		default = "", ]]
+--[[ 		open = "", ]]
+--[[ 		empty = "", ]]
+--[[ 		empty_open = "", ]]
+--[[ 		symlink = "", ]]
+--[[ 	}, ]]
+--[[ } ]]
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
@@ -98,6 +98,44 @@ nvim_tree.setup({
 		cmd = "trash",
 		require_confirm = true,
 	},
+  renderer = {
+    icons = {
+      webdev_colors = true,
+      git_placement = "before",
+      padding = " ",
+      symlink_arrow = " ➛ ",
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        bookmark = "",
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "✗",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
+    },
+  }
 	-- quit_on_open = 0,
 	-- git_hl = 1,
 	-- disable_window_picker = 0,

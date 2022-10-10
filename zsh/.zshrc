@@ -9,12 +9,6 @@ export TERMINFO="/usr/share/terminfo"
 export EDITOR="nvim"
 export READER="zathura"
 
-export GITHUB_USER="Foxhound401"
-export GITHUB_PASSWORD="qdpXsc1967"
-
-export GRAFANA_ADDR="https://anorok-gatewayloki.parcelperform.com"
-export GRAFANA_USERNAME=admin
-export GRAFANA_PASSWORD=uqOqm4sterP4ssw0rdQne0vF5
 # export PAGER="vimpager"
 # export BROWSER="chromium"
 export BROWSER="firefox"
@@ -151,6 +145,7 @@ alias lp='lpass show --password -c'
 alias flarecreate='flarectl dns create --type CNAME --content @ --zone eastplayers.io --proxy true --name '
 alias guu='git push |& grep "\-\-set\-upstream" | sh'
 alias stq='steampipe query'
+alias gdvim='nvim --listen godothost .'
 # alias rc="rustc"
 
 # remapping
@@ -212,6 +207,7 @@ alias tshark='tshark --color'
 alias feh='feh --draw-filename'
 
 # Folder fast travel
+alias piz="cd ~/potato-salad/pizza-adventure/"
 alias tt="ttyper"
 alias reactnative-frontend="cd ~/CapstoneProject/react-native-boilerplate"
 alias api-nodejs="cd ~/CapstoneProject/nodejs-boilerplate"
@@ -229,8 +225,6 @@ alias dn='cd /home/brody/Work/eastplayers/danang-cns-mobile'
 alias ph='cd /home/brody/Work/learning'
 alias fo='cd /home/brody/Work/forthscale'
 alias pp='cd /home/brody/Work/pp'
-alias tc-up="sudo tailscale up --accept-routes=true --accept-dns=true"
-alias tc-down="sudo tailscale down"
 
 # parcel-perform
 alias aws-prod="export AWS_PROFILE=AdministratorAccess-819159351269"
@@ -241,6 +235,8 @@ alias aws-cod="export AWS_PROFILE=AdministratorAccess-589431930217"
 alias aws-iris="export AWS_PROFILE=AdministratorAccess-723734408185"
 alias aws-hydra="export AWS_PROFILE=AdministratorAccess-319811653217"
 alias tf5='terraform-binary'
+alias tc-up="sudo tailscale up --accept-routes=true --accept-dns=true"
+alias tc-down="sudo tailscale down"
 
 # config files
 alias zshrc='vim ~/.zshrc'
@@ -282,7 +278,7 @@ alias kc-artemis="k config use-context arn:aws:eks:ap-southeast-1:009115022090:c
 alias kc-orion="k config use-context arn:aws:eks:ap-southeast-1:145228830231:cluster/orion-RiatABoo"
 alias kc-iris="k config use-context arn:aws:eks:ap-southeast-1:723734408185:cluster/iris-EFeXb6hJ"
 alias kc-internal="k config use-context arn:aws:eks:ap-southeast-1:819159351269:cluster/internal-tools-UmO5ZSAO"
-
+alias kc-hydra="k config use-context arn:aws:eks:ap-southeast-1:319811653217:cluster/hydra-Fvm050k9"
 alias tf='terraform'
 
 alias labk8s='cd ~/Labs/lab-k8s/'

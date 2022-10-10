@@ -89,6 +89,26 @@ _G.packer_plugins = {
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["animation.nvim"] = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/animation.nvim",
+    url = "https://github.com/anuvyklack/animation.nvim"
+  },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
+  bufexplorer = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/bufexplorer",
+    url = "https://github.com/jlanzarotta/bufexplorer"
+  },
+  catppuccin = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -124,11 +144,6 @@ _G.packer_plugins = {
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["darkplus.nvim"] = {
-    loaded = true,
-    path = "/home/brody/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
-    url = "https://github.com/lunarvim/darkplus.nvim"
-  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/dressing.nvim",
@@ -154,6 +169,11 @@ _G.packer_plugins = {
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["hydra.nvim"] = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/hydra.nvim",
+    url = "https://github.com/anuvyklack/hydra.nvim"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -169,6 +189,12 @@ _G.packer_plugins = {
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
     url = "https://github.com/folke/lsp-colors.nvim"
   },
+  ["lsp_lines.nvim"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0" },
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
+    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -180,6 +206,16 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/brody/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  middleclass = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/middleclass",
+    url = "https://github.com/anuvyklack/middleclass"
+  },
+  neogit = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
   },
   ["neovim-session-manager"] = {
     loaded = true,
@@ -256,20 +292,15 @@ _G.packer_plugins = {
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  onehalf = {
+  ["oxocarbon.nvim"] = {
     loaded = true,
-    path = "/home/brody/.local/share/nvim/site/pack/packer/start/onehalf/vim",
-    url = "https://github.com/sonph/onehalf"
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    url = "https://github.com/shaunsingh/oxocarbon.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  ["palenight.vim"] = {
-    loaded = true,
-    path = "/home/brody/.local/share/nvim/site/pack/packer/start/palenight.vim",
-    url = "https://github.com/drewtempelmeyer/palenight.vim"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -280,6 +311,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["smart-splits.nvim"] = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
+    url = "https://github.com/mrjones2014/smart-splits.nvim"
   },
   tabular = {
     loaded = true,
@@ -300,6 +336,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
   },
   ["vim-fugitive"] = {
     loaded = true,
@@ -326,6 +367,11 @@ _G.packer_plugins = {
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/vim-rest-console",
     url = "https://github.com/diepm/vim-rest-console"
   },
+  ["vim-smartword"] = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/vim-smartword",
+    url = "https://github.com/anuvyklack/vim-smartword"
+  },
   ["vim-smoothie"] = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/vim-smoothie",
@@ -346,18 +392,38 @@ _G.packer_plugins = {
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
   },
+  ["vim-wordmotion"] = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/vim-wordmotion",
+    url = "https://github.com/chaoren/vim-wordmotion"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/brody/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["windows.nvim"] = {
+    config = { "\27LJ\2\nå\1\0\0\3\0\b\0\0186\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\n\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\16equalalways\16winminwidth\rwinwidth\6o\bvim\0" },
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/windows.nvim",
+    url = "https://github.com/anuvyklack/windows.nvim"
+  },
+  ["winshift.nvim"] = {
+    loaded = true,
+    path = "/home/brody/.local/share/nvim/site/pack/packer/start/winshift.nvim",
+    url = "https://github.com/sindrets/winshift.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Runtimepath customization
-time([[Runtimepath customization]], true)
-vim.o.runtimepath = vim.o.runtimepath .. ",/home/brody/.local/share/nvim/site/pack/packer/start/onehalf/vim"
-time([[Runtimepath customization]], false)
+-- Config for: windows.nvim
+time([[Config for windows.nvim]], true)
+try_loadstring("\27LJ\2\nå\1\0\0\3\0\b\0\0186\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\n\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\16equalalways\16winminwidth\rwinwidth\6o\bvim\0", "config", "windows.nvim")
+time([[Config for windows.nvim]], false)
+-- Config for: lsp_lines.nvim
+time([[Config for lsp_lines.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
+time([[Config for lsp_lines.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

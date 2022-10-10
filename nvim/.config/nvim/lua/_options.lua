@@ -57,3 +57,4 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
 vim.cmd([[set rtp+=/home/brody/.local/share/nvim/site/pack/packer/start/onehalf/vim]]) -- TODO: this doesn't seem to work
+vim.cmd([[set rtp+=/home/brody/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim/colors/oxocarbon.lua]]) -- TODO: this doesn't seem to work

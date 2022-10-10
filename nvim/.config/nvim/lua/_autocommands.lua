@@ -33,5 +33,6 @@ vim.cmd([[
 vim.cmd([[
   augroup _gdscript_filetype
     autocmd BufRead,BufNewFile *.gd,*.godot,*.tres,*.tscn set ft=gdscript
+
   augroup END
 ]])

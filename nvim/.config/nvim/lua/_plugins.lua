@@ -1,4 +1,4 @@
----@diagnostic disable: undefined-global
+  ---@diagnostic disable: undefined-global
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -59,6 +59,8 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("p00f/nvim-ts-rainbow")
   use("nathom/filetype.nvim")
+  use("mbbill/undotree")
+
 
 	-- Lines
 	use("hoob3rt/lualine.nvim")
@@ -73,6 +75,27 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-vsnip")
 
+  -- Bars
+  use({
+    "romgrk/barbar.nvim",
+    requires = { "kyazdani42/nvim-web-devicons"}
+  })
+  use("jlanzarotta/bufexplorer")
+  use("sindrets/winshift.nvim")
+  use("mrjones2014/smart-splits.nvim")
+  use({ "anuvyklack/windows.nvim",
+   requires = {
+      "anuvyklack/middleclass",
+      "anuvyklack/animation.nvim"
+   },
+   config = function()
+      vim.o.winwidth = 10
+      vim.o.winminwidth = 10
+      vim.o.equalalways = false
+      require('windows').setup()
+   end
+})
+
 	-- LSP
 	use("williamboman/nvim-lsp-installer")
 
@@ -86,6 +109,12 @@ return packer.startup(function(use)
   use "lukas-reineke/cmp-rg"
   use("habamax/vim-godot")
   use("towolf/vim-helm")
+  use({
+  "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  config = function()
+    require("lsp_lines").setup()
+  end,
+})
   
 	-- Treesitter
 	use({
@@ -108,19 +137,21 @@ return packer.startup(function(use)
 	-- Colorscheme
 	-- use("arcticicestudio/nord-vim")
 	use("morhetz/gruvbox")
-	use("drewtempelmeyer/palenight.vim")
-	use({
-		"sonph/onehalf",
-		rtp = "vim",
-	})
-	use("lunarvim/darkplus.nvim")
 	use("folke/tokyonight.nvim")
+  use({'shaunsingh/oxocarbon.nvim', run = './install.sh'})
+  use({ "catppuccin/nvim", as = "catppuccin"})
 
 	-- postman alternative
 	use("diepm/vim-rest-console")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
+  use({"TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim"})
+
+  -- Hydra
+  use("anuvyklack/hydra.nvim")
+  use("chaoren/vim-wordmotion")
+  use("anuvyklack/vim-smartword")
 
 	-- Comment
 	use("JoosepAlviste/nvim-ts-context-commentstring")

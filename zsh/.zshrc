@@ -208,11 +208,6 @@ alias feh='feh --draw-filename'
 
 # Folder fast travel
 alias piz="cd ~/potato-salad/pizza-adventure/"
-alias tt="ttyper"
-alias reactnative-frontend="cd ~/CapstoneProject/react-native-boilerplate"
-alias api-nodejs="cd ~/CapstoneProject/nodejs-boilerplate"
-alias web-capstone="cd ~/CapstoneProject/web-admin"
-alias playbooks='cd ~/pixio/ansible-playbooks/'
 alias stardewMods='cd ~/.local/share/Steam/steamapps/common/Stardew\ Valley/Mods/'
 alias nav='cd /etc/nginx/sites-available/'
 alias nx='cd /etc/nginx/sites-available/'
@@ -221,22 +216,10 @@ alias k8s='cd /usr/share/nginx/www/hhg-dev-ops/k8s-cluster-config/'
 alias lgo='cd /home/brody/Labs/lab-go'
 alias pg='cd ~/Work/poppy-faire-game'
 alias pb='cd ~/Work/poppy-faire-lib'
-alias dn='cd /home/brody/Work/eastplayers/danang-cns-mobile'
 alias ph='cd /home/brody/Work/learning'
 alias fo='cd /home/brody/Work/forthscale'
 alias pp='cd /home/brody/Work/pp'
 
-# parcel-perform
-alias aws-prod="export AWS_PROFILE=AdministratorAccess-819159351269"
-alias aws-artemis="export AWS_PROFILE=AdministratorAccess-009115022090"
-alias aws-anorok="export AWS_PROFILE=AdministratorAccess-751440698033"
-alias aws-orion="export AWS_PROFILE=AdministratorAccess-145228830231"
-alias aws-cod="export AWS_PROFILE=AdministratorAccess-589431930217"
-alias aws-iris="export AWS_PROFILE=AdministratorAccess-723734408185"
-alias aws-hydra="export AWS_PROFILE=AdministratorAccess-319811653217"
-alias tf5='terraform-binary'
-alias tc-up="sudo tailscale up --accept-routes=true --accept-dns=true"
-alias tc-down="sudo tailscale down"
 
 # config files
 alias zshrc='vim ~/.zshrc'
@@ -271,15 +254,6 @@ alias kd='k describe'
 alias kg='k get'
 alias kge="k get events --sort-by='.metadata.creationTimestamp' | tail -8"
 
-alias kc-anorok="k config use-context arn:aws:eks:ap-southeast-1:751440698033:cluster/anorok-bBZTfjjv"
-alias kc-cod="k config use-context arn:aws:eks:ap-southeast-1:589431930217:cluster/cod-3XjQecxM"
-# alias kc-hydra="k config use-context "
-alias kc-prod="k config use-context arn:aws:eks:eu-west-1:819159351269:cluster/production-PhKBWYLW"
-alias kc-artemis="k config use-context arn:aws:eks:ap-southeast-1:009115022090:cluster/artemis-Rb31070c"
-alias kc-orion="k config use-context arn:aws:eks:ap-southeast-1:145228830231:cluster/orion-RiatABoo"
-alias kc-iris="k config use-context arn:aws:eks:ap-southeast-1:723734408185:cluster/iris-EFeXb6hJ"
-alias kc-internal="k config use-context arn:aws:eks:ap-southeast-1:819159351269:cluster/internal-tools-UmO5ZSAO"
-alias kc-hydra="k config use-context arn:aws:eks:ap-southeast-1:319811653217:cluster/hydra-Fvm050k9"
 alias tf='terraform'
 
 alias labk8s='cd ~/Labs/lab-k8s/'

@@ -259,6 +259,7 @@ alias dm='docker-machine'
 
 
 # kubectl alias
+alias kubectl='kubecolor'
 alias k='kubectl'
 alias kgp='k get pod'
 alias kgd='k get deploy'
@@ -287,6 +288,8 @@ alias labk8s='cd ~/Labs/lab-k8s/'
 alias sshconfig='vim ~/.ssh/config'
 
 eval $(thefuck --alias)
+
+# alias diff='colordiff'
 
 # books
 alias brust='zathura ~/Books/Programming Languages/Rust/programming-rust-jim-blandy-orendorff.pdf'

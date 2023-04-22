@@ -2,7 +2,6 @@ local options = {
 	backup = false, -- creates a backup file
 	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
 	cmdheight = 2, -- more space in the neovim command line for displaying messages
-	completeopt = { "menu", "menuone", "noselect" }, -- mostly just for cmp
 	conceallevel = 0, -- so that `` is visible in markdown files
 	fileencoding = "utf-8", -- the encoding written to a file
 	hlsearch = true, -- highlight all matches on previous search pattern
@@ -40,6 +39,11 @@ local options = {
 	inccommand = "split",
 	winblend = 10,
 	pumblend = 5,
+-- menuone: popup even when there's only one match
+-- noinsert: Do not insert text until a selection is made
+-- noselect: Do not select, force to select one from the menu
+-- shortness: avoid showing extra messages when using completion
+	completeopt = { "menu", "menuone", "noselect" },
 }
 
 -- highlight limit line column, 

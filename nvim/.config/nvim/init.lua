@@ -23,3 +23,6 @@ require("_folding")
 require("_hydra")
 require("_toggleterm")
 require("_copilot")
+require("_mason")
+require("_rust-tools")
+

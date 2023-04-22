@@ -14,25 +14,11 @@ vim.g.vim_markdown_conceal = 0
 vim.g.vim_markdown_conceal_code_blocks = 0
 vim.g.c_syntax_for_h = 1
 
--- startify
-vim.cmd([[
-let g:startify_bookmarks = [
-  \ { 'z': '~/.zshrc' },
-  \ { 'v': '~/.config/nvim/init.vim' },
-  \ { 'p': '~/.config/nvim/plug.vim' },
-  \ ]
-
-let g:startify_lists = [
-      \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
-      \ { 'header': ['   MRU'],            'type': 'files' },
-      \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
-      \ ]
-
-]])
-vim.g.startify_fortune_use_unicode = 0
 -- IndentLine
 vim.g.indentLine_concealcursor = ""
 vim.g.indentLine_setColors = 0
+
+-- 
 vim.g.indentLine_char_list = { "|", "¦", "┆", "┊" }
 
 -- Modes
@@ -44,24 +30,11 @@ vim.g.indentLine_char_list = { "|", "¦", "┆", "┊" }
 --   command_mode = "c",
 
 -- Normal mode
--- Window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- Remove all trailing whitespace by pressing F5
+-- keymap("n", "<F5>", ":let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>", opts)
 
--- Buffer nagivation
-keymap("n", "S-h", ":bprevious<CR>", opts)
-keymap("n", "S-l", ":bnext<CR>", opts)
-
--- Resize with arrows
-keymap("n", "<C-A-k>", ":resize -2<CR>", opts)
-keymap("n", "<C-A-j>", ":resize +2<CR>", opts)
-keymap("n", "<C-A-h>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-A-l>", ":vertical resize +2<CR>", opts)
-
--- Quick saving
-keymap("n", "<leader>w", ":w!<CR>", opts)
+-- format json with jq
+keymap("n", "<leader>jq", ":%!jq .<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==", opts)
@@ -80,21 +53,31 @@ keymap("n", "<leader><space>", ":nohlsearch<CR>", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
--- Access startify
-keymap("n", "<C-s>", ":Startify<CR>", opts)
-
 -- Telescope remap
 -- check again if this is needed when settup telescope at its own file
 keymap("n", "<C-p>", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<C-s>", "<cmd>Telescope live_grep<CR>", opts)
 
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 
 -- move between buffers
-keymap("n", "<leader>gb", "<cmd>BufferLinePick<CR>", opts)
+
+keymap("n", "<leader>gb", "<cmd>BufferPick<CR>", opts)
+
+-- SmartResize
+keymap("n", "<leader>rs", "<cmd>SmartResizeMode<CR>", opts)
+vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
+vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
+vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
+vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
+-- moving between splits
+vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
+vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
+vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
+vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
 
 -- Visual mode
 keymap("v", "<C-c>", '"+y<CR>', opts)
-
 -- Insert Mode
 -- press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)

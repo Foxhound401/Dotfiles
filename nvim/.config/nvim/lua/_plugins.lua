@@ -50,7 +50,6 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- comment also integrate with treesitter
 	use("norcalli/nvim-colorizer.lua")
 	use("psliwka/vim-smoothie")
-	use("mhinz/vim-startify") -- homepage for vim
 	use("lukas-reineke/indent-blankline.nvim") -- blankline that integrate with tree sitter
 	use("kyazdani42/nvim-web-devicons")
 	use("folke/which-key.nvim")
@@ -138,7 +137,7 @@ return packer.startup(function(use)
 	-- use("arcticicestudio/nord-vim")
 	use("morhetz/gruvbox")
 	use("folke/tokyonight.nvim")
-  use({'shaunsingh/oxocarbon.nvim', run = './install.sh'})
+  use({'nyoom-engineering/oxocarbon.nvim'})
   use({ "catppuccin/nvim", as = "catppuccin"})
 
 	-- postman alternative
@@ -162,6 +161,17 @@ return packer.startup(function(use)
 		ft = "markdown",
 		run = "cd app && yarn install",
 	})
+
+  use ({"akinsho/toggleterm.nvim", 
+      tag = '*', 
+      config = function()
+        require("toggleterm").setup()
+      end
+  })
+
+  -- Copilot
+  use { 'github/copilot.vim' }
+
 
 	if packer_bootstrap then
 		require("packer").sync()
